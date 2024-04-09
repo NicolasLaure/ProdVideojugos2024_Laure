@@ -76,15 +76,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>obj\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)obj\x86\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\x86\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)</TargetName>
-    <IntDir>obj\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\x86\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)bin\x86\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -145,6 +145,10 @@ xcopy "$(SolutionDir)SFML\x86\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)SFML\x64\Dlls\Debug" "$(OutDir)" /i /y /s
+xcopy "$(SolutionDir)SFML\x64\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
