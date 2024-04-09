@@ -104,11 +104,11 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)SFML\Libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SFML\x86\Libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(SolutionDir)SFML\Dlls\Debug" "$(OutDir)" /i /y /s
-xcopy "$(SolutionDir)SFML\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
+      <Command>xcopy "$(SolutionDir)SFML\x86\Dlls\Debug" "$(OutDir)" /i /y /s
+xcopy "$(SolutionDir)SFML\x86\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,11 +127,11 @@ xcopy "$(SolutionDir)SFML\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)SFML\Libs\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SFML\x86\Libs\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(SolutionDir)SFML\Dlls\Release" "$(OutDir)" /i /y /s
-xcopy "$(SolutionDir)SFML\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
+      <Command>xcopy "$(SolutionDir)SFML\x86\Dlls\Release" "$(OutDir)" /i /y /s
+xcopy "$(SolutionDir)SFML\x86\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
