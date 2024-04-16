@@ -10,5 +10,5 @@ private:
 	void ChangeScene();
 public:
 	GameLoop(sf::RenderWindow* window);
-	void Loop();
+	void StartLoop();
 };

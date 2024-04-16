@@ -5,7 +5,7 @@ GameLoop::GameLoop(sf::RenderWindow* window)
 	this->window = window;
 }
 
-void GameLoop::Loop()
+void GameLoop::StartLoop()
 {
 	while (window->isOpen() && !ShouldClose())
 	{
