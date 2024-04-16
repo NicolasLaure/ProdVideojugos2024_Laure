@@ -182,6 +182,10 @@ xcopy "$(SolutionDir)SFML\x64\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
       <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)SFML\x64\Libs\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)SFML\x64\Dlls\Release" "$(OutDir)" /i /y /s
+xcopy "$(SolutionDir)SFML\x64\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
