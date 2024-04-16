@@ -8,6 +8,12 @@
     <ClCompile Include="src\GameLoop.cpp">
       <Filter>GameFlow</Filter>
     </ClCompile>
+    <ClCompile Include="src\MenuScene.cpp">
+      <Filter>ScenesManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp">
+      <Filter>ScenesManagement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h">
@@ -17,6 +23,15 @@
       <Filter>GameFlow</Filter>
     </ClInclude>
     <ClInclude Include="src\Scene.h">
+      <Filter>ScenesManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MenuScene.h">
+      <Filter>ScenesManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ScenesEnum.h">
+      <Filter>ScenesManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SceneManager.h">
       <Filter>ScenesManagement</Filter>
     </ClInclude>
   </ItemGroup>

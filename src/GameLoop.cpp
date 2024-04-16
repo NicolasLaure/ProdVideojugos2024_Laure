@@ -1,4 +1,5 @@
 #include "GameLoop.h"
+#include "SceneManager.h"
 
 GameLoop::GameLoop(sf::RenderWindow* window)
 {
@@ -7,9 +8,10 @@ GameLoop::GameLoop(sf::RenderWindow* window)
 
 void GameLoop::StartLoop()
 {
+	//Scenes prevScene = Scenes::NONE;
 	while (window->isOpen() && !ShouldClose())
 	{
-
+	
 
 
 	}
@@ -23,8 +25,4 @@ bool GameLoop::ShouldClose()
 			return true;
 
 	return false;
-}
-
-void GameLoop::ChangeScene()
-{
 }
