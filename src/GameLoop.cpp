@@ -24,3 +24,7 @@ bool GameLoop::ShouldClose()
 
 	return false;
 }
+
+void GameLoop::ChangeScene()
+{
+}

@@ -4,8 +4,10 @@
 class GameLoop
 {
 private:
-	bool ShouldClose();
 	sf::RenderWindow* window;
+
+	bool ShouldClose();
+	void ChangeScene();
 public:
 	GameLoop(sf::RenderWindow* window);
 	void Loop();
