@@ -1,11 +1,8 @@
-#include <SFML/Graphics.hpp>
+#include "Game.h"
 
-void main()
+int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200,200), "SFML WORKS!!");
-
-	while (window.isOpen())
-	{
-
-	}
+	Game game;
+	game.RunGame();
+	return 0;
 }
