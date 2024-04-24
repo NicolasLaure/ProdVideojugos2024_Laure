@@ -1,5 +1,6 @@
 #include "GameLoop.h"
 #include "SceneManager.h"
+#include "MenuScene.h"
 
 GameLoop::GameLoop(sf::RenderWindow* window)
 {
@@ -8,12 +9,15 @@ GameLoop::GameLoop(sf::RenderWindow* window)
 
 void GameLoop::StartLoop()
 {
-	//Scenes prevScene = Scenes::NONE;
+	SceneManager* sceneManager = new SceneManager(new MenuScene());
+	sf::Clock deltaClock;
+	deltaClock.restart();
+	sf::Time deltaTime;
 	while (window->isOpen() && !ShouldClose())
 	{
-	
-
-
+		sceneManager->CurrentSceneFlow(deltaTime.asSeconds(), window);
+		deltaTime = deltaClock.restart();
+		//sceneManager->ChangeScene();
 	}
 }
 

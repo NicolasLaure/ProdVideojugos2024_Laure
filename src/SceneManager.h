@@ -5,14 +5,20 @@
 template <class T>
 concept SceneObject = std::derived_from<T, Scene>;
 
-template <SceneObject T>
 class SceneManager
 {
 private:
-	static Scene currentScene;
+	Scene* currentScene = nullptr;
 public:
-	//template <SceneObject T>
-	static void ChangeScene(Scene sceneTo);
+
+	template<SceneObject T>
+	SceneManager(T* initialScene);
+
+	template<SceneObject T>
+	void ChangeScene();
+
+	void CurrentSceneFlow(float deltaTime, sf::RenderWindow* window);
+
 };
 
 #include "SceneManager.tpp"

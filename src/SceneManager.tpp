@@ -1,9 +1,46 @@
 #include "SceneManager.h"
+#include "MenuScene.h"
 
 template<SceneObject T>
-void SceneManager<T>::ChangeScene(Scene sceneTo)
+SceneManager::SceneManager(T* initialScene)
 {
-	currentScene.End();
-	currentScene = sceneTo;
-	currentScene.Start();
+	currentScene = initialScene;
+	currentScene->Start();
 }
+
+template<SceneObject T>
+void SceneManager::ChangeScene()
+{
+	if (currentScene != nullptr)
+	{
+		currentScene->End();
+		delete currentScene;
+	}
+
+	currentScene = new T();
+	currentScene->Start();
+}
+
+
+void SceneManager::CurrentSceneFlow(float deltaTime, sf::RenderWindow* window)
+{
+	currentScene->Update(deltaTime);
+	currentScene->Draw(window);
+	Scenes nextScene = currentScene->ShouldChangeScene();
+	if (nextScene == Scenes::NONE)
+		return;
+
+	switch (nextScene)
+	{
+	case Scenes::MENU:
+		ChangeScene<MenuScene>();
+		break;
+	case Scenes::GAME:
+		break;
+	case Scenes::NONE:
+		break;
+	default:
+		break;
+	}
+}
+

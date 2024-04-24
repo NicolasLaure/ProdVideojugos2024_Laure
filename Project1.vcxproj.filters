@@ -11,7 +11,7 @@
     <ClCompile Include="src\MenuScene.cpp">
       <Filter>ScenesManagement</Filter>
     </ClCompile>
-    <ClCompile Include="src\SceneManager.cpp">
+    <ClCompile Include="src\Scene.cpp">
       <Filter>ScenesManagement</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,5 +42,10 @@
     <Filter Include="GameFlow">
       <UniqueIdentifier>{5f30b92f-e733-4031-b8b8-c577c58e0d00}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\SceneManager.tpp">
+      <Filter>ScenesManagement</Filter>
+    </None>
   </ItemGroup>
 </Project>
