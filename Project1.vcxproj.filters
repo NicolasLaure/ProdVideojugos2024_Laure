@@ -14,6 +14,12 @@
     <ClCompile Include="src\Scene.cpp">
       <Filter>ScenesManagement</Filter>
     </ClCompile>
+    <ClCompile Include="src\Button.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h">
@@ -34,6 +40,15 @@
     <ClInclude Include="src\SceneManager.h">
       <Filter>ScenesManagement</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rect.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Button.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ScenesManagement">
@@ -41,6 +56,15 @@
     </Filter>
     <Filter Include="GameFlow">
       <UniqueIdentifier>{5f30b92f-e733-4031-b8b8-c577c58e0d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{bf715708-7de3-4837-875f-c9a8a9452ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{7b14ce72-6eb3-4fe7-ac60-2c02fe2a8387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{a6a99898-d7c3-4d98-bd3b-c06f495e83c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
