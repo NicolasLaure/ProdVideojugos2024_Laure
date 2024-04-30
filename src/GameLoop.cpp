@@ -9,13 +9,13 @@ GameLoop::GameLoop(sf::RenderWindow* window)
 
 void GameLoop::StartLoop()
 {
-	SceneManager* sceneManager = new SceneManager(new MenuScene());
+	SceneManager sceneManager = SceneManager(new MenuScene());
 	sf::Clock deltaClock;
 	deltaClock.restart();
 	sf::Time deltaTime;
 	while (window->isOpen() && !ShouldClose())
 	{
-		sceneManager->CurrentSceneFlow(deltaTime.asSeconds(), window);
+		sceneManager.CurrentSceneFlow(deltaTime.asSeconds(), window);
 		deltaTime = deltaClock.restart();
 		//sceneManager->ChangeScene();
 	}
