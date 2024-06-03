@@ -1,5 +1,6 @@
 #include "SceneManager.h"
 #include "MenuScene.h"
+#include "GameScene.h"
 
 template<SceneObject T>
 SceneManager::SceneManager(T* initialScene)
@@ -36,6 +37,7 @@ void SceneManager::CurrentSceneFlow(float deltaTime, sf::RenderWindow* window)
 		ChangeScene<MenuScene>();
 		break;
 	case Scenes::GAME:
+		ChangeScene<GameScene>();
 		break;
 	case Scenes::NONE:
 		break;

@@ -15,9 +15,9 @@ void MenuScene::Start()
 
 void MenuScene::Update(float deltaTime)
 {
-	circle.setPosition(circle.getPosition().x + (circleSpeed * deltaTime), 0);
+	//circle.setPosition(circle.getPosition().x + (circleSpeed * deltaTime), 0);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-		nextScene = Scenes::MENU;
+		nextScene = Scenes::GAME;
 }
 
 void MenuScene::Draw(sf::RenderWindow* window)

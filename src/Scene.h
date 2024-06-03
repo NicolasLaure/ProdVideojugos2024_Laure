@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "ScenesEnum.h"
+
 class Scene
 {
 public:

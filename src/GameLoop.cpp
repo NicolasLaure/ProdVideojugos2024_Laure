@@ -2,6 +2,8 @@
 #include "SceneManager.h"
 #include "MenuScene.h"
 
+#include <iostream>
+
 GameLoop::GameLoop(sf::RenderWindow* window)
 {
 	this->window = window;

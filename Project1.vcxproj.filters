@@ -20,6 +20,9 @@
     <ClCompile Include="src\Entity.cpp">
       <Filter>Entities</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameScene.cpp">
+      <Filter>ScenesManagement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h">
@@ -48,6 +51,9 @@
     </ClInclude>
     <ClInclude Include="src\Entity.h">
       <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameScene.h">
+      <Filter>ScenesManagement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
