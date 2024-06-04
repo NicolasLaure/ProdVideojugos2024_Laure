@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <math.h>
 
 Player::Player()
 {
@@ -13,10 +14,11 @@ void Player::Start()
 
 void Player::Update(float deltaTime)
 {
-	shape.setPosition(shape.getPosition().x, shape.getPosition().y + (gravityForce * deltaTime));
-
+	verticalVelocity += gravityForce;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-		shape.setPosition(shape.getPosition().x, shape.getPosition().y - playerJumpForce * deltaTime);
+		verticalVelocity = -playerJumpForce;
+
+	shape.setPosition(shape.getPosition().x, std::clamp<float>(shape.getPosition().y + (verticalVelocity * deltaTime), 0, 500));
 }
 
 void Player::Draw(sf::RenderWindow* window)
