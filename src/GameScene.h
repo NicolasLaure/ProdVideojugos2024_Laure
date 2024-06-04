@@ -1,14 +1,11 @@
 #pragma once
 #include "Scene.h"
+#include "Player.h"
 
 class GameScene : public Scene
 {
 private:
-	sf::CircleShape player;
-	float gravityForce = 50;
-	float playerJumpForce = 100;
-	float playerSpeed = 75;
-	float currentDirX = 0;
+	Player player;
 public:
 	GameScene();
 	~GameScene() {}

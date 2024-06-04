@@ -17,11 +17,11 @@
     <ClCompile Include="src\Button.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="src\Entity.cpp">
-      <Filter>Entities</Filter>
-    </ClCompile>
     <ClCompile Include="src\GameScene.cpp">
       <Filter>ScenesManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\GameScene.h">
       <Filter>ScenesManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>Entities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
