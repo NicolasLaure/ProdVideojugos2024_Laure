@@ -7,8 +7,6 @@ private:
 	sf::CircleShape shape;
 	float gravityForce = 50;
 	float playerJumpForce = 100;
-	float playerSpeed = 75;
-	float currentDirX = 0;
 public:
 	Player();
 	virtual void Start() override;

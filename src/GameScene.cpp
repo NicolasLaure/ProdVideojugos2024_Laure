@@ -15,7 +15,6 @@ void GameScene::Start()
 void GameScene::Update(float deltaTime)
 {
 	player.Update(deltaTime);
-
 }
 
 void GameScene::Draw(sf::RenderWindow* window)
