@@ -3,6 +3,8 @@
 
 class Entity
 {
+protected:
+	sf::Rect<float> collider;
 
 public:
 
@@ -10,5 +12,7 @@ public:
 	virtual void Update(float deltaTime) = 0;
 	virtual void Draw(sf::RenderWindow* window) = 0;
 	virtual void End() = 0;
+
+	virtual void OnCollisionEnter(Entity* other) = 0;
 };
 

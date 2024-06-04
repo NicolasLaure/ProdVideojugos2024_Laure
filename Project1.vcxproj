@@ -23,6 +23,7 @@
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameLoop.cpp" />
     <ClCompile Include="src\GameScene.cpp" />
+    <ClCompile Include="src\Ground.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MenuScene.cpp" />
     <ClCompile Include="src\Player.cpp" />
@@ -34,6 +35,7 @@
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\GameLoop.h" />
     <ClInclude Include="src\GameScene.h" />
+    <ClInclude Include="src\Ground.h" />
     <ClInclude Include="src\MenuScene.h" />
     <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Scene.h" />
@@ -166,7 +168,7 @@ xcopy "$(SolutionDir)SFML\x86\Dlls\Dependencies" "$(OutDir)" /i /y /s</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>

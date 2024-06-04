@@ -1,5 +1,6 @@
 #include "Player.h"
 #include <math.h>
+#include "Ground.h"
 
 Player::Player()
 {
@@ -15,6 +16,9 @@ void Player::Start()
 void Player::Update(float deltaTime)
 {
 	verticalVelocity += gravityForce;
+	if (isGrounded)
+		verticalVelocity = 0;
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 		verticalVelocity = -playerJumpForce;
 
@@ -28,4 +32,10 @@ void Player::Draw(sf::RenderWindow* window)
 
 void Player::End()
 {
+}
+
+void Player::OnCollisionEnter(Entity* other)
+{
+	if (dynamic_cast<Ground*>(other) != nullptr)
+		isGrounded = true;
 }
