@@ -23,6 +23,8 @@ void Player::Update(float deltaTime)
 		verticalVelocity = -playerJumpForce;
 
 	shape.setPosition(shape.getPosition().x, std::clamp<float>(shape.getPosition().y + (verticalVelocity * deltaTime), 0, 500));
+	collider.top = shape.getPosition().y;
+	collider.left = shape.getPosition().x;
 }
 
 void Player::Draw(sf::RenderWindow* window)
@@ -37,5 +39,8 @@ void Player::End()
 void Player::OnCollisionEnter(Entity* other)
 {
 	if (dynamic_cast<Ground*>(other) != nullptr)
+	{
 		isGrounded = true;
+		shape.setPosition(shape.getPosition().x, other->GetCollider().getPosition().y - collider.height);
+	}
 }
