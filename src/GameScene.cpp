@@ -17,6 +17,7 @@ void GameScene::Update(float deltaTime)
 {
 	player.Update(deltaTime);
 	ground.Update(deltaTime);
+	collisionHandler.CheckCollisions(&player, &ground);
 }
 
 void GameScene::Draw(sf::RenderWindow* window)

@@ -26,6 +26,9 @@
     <ClCompile Include="src\Ground.cpp">
       <Filter>Entities</Filter>
     </ClCompile>
+    <ClCompile Include="src\CollisionsHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h">
@@ -64,6 +67,9 @@
     <ClInclude Include="src\Ground.h">
       <Filter>Entities</Filter>
     </ClInclude>
+    <ClInclude Include="src\CollisionsHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ScenesManagement">
@@ -80,6 +86,9 @@
     </Filter>
     <Filter Include="Entities">
       <UniqueIdentifier>{a6a99898-d7c3-4d98-bd3b-c06f495e83c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Handlers">
+      <UniqueIdentifier>{fd7963e1-9a6e-4550-a700-3f506671e550}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 #pragma once
 #include "Entity.h"
 
-class Ground : Entity
+class Ground : public Entity
 {
-private: 
+private:
 	sf::RectangleShape shape;
 public:
 	Ground();
