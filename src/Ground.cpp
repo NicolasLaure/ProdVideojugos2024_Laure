@@ -20,6 +20,9 @@ void Ground::Start()
 
 void Ground::Update(float deltaTime)
 {
+	shape.setPosition(shape.getPosition().x - 150 * deltaTime, shape.getPosition().y);
+	collider.left = shape.getPosition().x;
+	collider.top = shape.getPosition().y;
 }
 
 void Ground::Draw(sf::RenderWindow* window)
