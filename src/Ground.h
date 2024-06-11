@@ -3,6 +3,8 @@
 
 class Ground : Entity
 {
+private: 
+	sf::RectangleShape shape;
 public:
 	Ground();
 	~Ground();

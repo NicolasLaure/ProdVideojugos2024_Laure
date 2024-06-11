@@ -11,6 +11,10 @@ void Player::Start()
 	shape.setRadius(15);
 	shape.setPointCount(15);
 	shape.setPosition(50, 300);
+	collider.width = shape.getRadius() * 2;
+	collider.height = shape.getRadius() * 2;
+	collider.left = shape.getPosition().x;
+	collider.top = shape.getPosition().y;
 }
 
 void Player::Update(float deltaTime)

@@ -10,17 +10,20 @@ GameScene::GameScene()
 void GameScene::Start()
 {
 	player.Start();
+	ground.Start();
 }
 
 void GameScene::Update(float deltaTime)
 {
 	player.Update(deltaTime);
+	ground.Update(deltaTime);
 }
 
 void GameScene::Draw(sf::RenderWindow* window)
 {
 	window->clear(sf::Color::Black);
 	player.Draw(window);
+	ground.Draw(window);
 	window->display();
 }
 
