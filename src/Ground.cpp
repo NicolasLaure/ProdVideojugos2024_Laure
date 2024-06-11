@@ -37,3 +37,7 @@ void Ground::End()
 void Ground::OnCollisionEnter(Entity* other)
 {
 }
+
+void Ground::OnCollisionExit(Entity* other)
+{
+}

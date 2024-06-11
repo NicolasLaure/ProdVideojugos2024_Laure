@@ -6,6 +6,7 @@ class Entity
 protected:
 	sf::Rect<float> collider;
 public:
+	Entity* otherCollider;
 
 	virtual void Start() = 0;
 	virtual void Update(float deltaTime) = 0;
@@ -13,6 +14,7 @@ public:
 	virtual void End() = 0;
 
 	virtual void OnCollisionEnter(Entity* other) = 0;
+	virtual void OnCollisionExit(Entity* other) = 0;
 
 	sf::Rect<float> GetCollider()
 	{

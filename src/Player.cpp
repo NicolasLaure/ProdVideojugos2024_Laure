@@ -49,5 +49,15 @@ void Player::OnCollisionEnter(Entity* other)
 	{
 		isGrounded = true;
 		shape.setPosition(shape.getPosition().x, other->GetCollider().getPosition().y - collider.height);
+		otherCollider = other;
+	}
+}
+
+void Player::OnCollisionExit(Entity* other)
+{
+	if (dynamic_cast<Ground*>(other) != nullptr)
+	{
+		isGrounded = false;
+		otherCollider = nullptr;
 	}
 }

@@ -16,6 +16,7 @@ public:
 	virtual void Draw(sf::RenderWindow* window) override;
 	virtual void End() override;
 	virtual void OnCollisionEnter(Entity* other) override;
+	virtual void OnCollisionExit(Entity* other) override;
 
 };
 
