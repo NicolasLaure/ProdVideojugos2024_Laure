@@ -24,9 +24,12 @@ void Player::Update(float deltaTime)
 		verticalVelocity = 0;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	{
 		verticalVelocity = -playerJumpForce;
+		isGrounded = false;
+	}
 
-	shape.setPosition(shape.getPosition().x, std::clamp<float>(shape.getPosition().y + (verticalVelocity * deltaTime), 0, 500));
+	shape.setPosition(shape.getPosition().x, shape.getPosition().y + (verticalVelocity * deltaTime));
 	collider.top = shape.getPosition().y;
 	collider.left = shape.getPosition().x;
 }
